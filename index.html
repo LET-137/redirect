@@ -16,12 +16,15 @@
  function redirect() {
     if (lastDigit % 2 === 1) {
       // 奇数の場合はGoogleにリダイレクト
+      console.log("Redirecting to Google...");
       window.location.href = "https://www.google.com";
     } else {
       // 偶数の場合はYahooにリダイレクト
+      console.log("Redirecting to Yahoo...");
       window.location.href = "https://www.yahoo.co.jp";
     }
   }
+  
   window.addEventListener("load", redirect);
 </script>
 </html>
