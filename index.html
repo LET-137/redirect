@@ -8,11 +8,20 @@
   <h1>Hello</h1>
 </body>
 
-<script>  
+<script> 
+ const now = new Date();
+ const minute = now.getMinutes();
+ const lastDigit = minute % 10;
+ 
  function redirect() {
-    window.location.href = "https://www.google.com";
+    if (lastDigit % 2 === 1) {
+      // 奇数の場合はGoogleにリダイレクト
+      window.location.href = "https://www.google.com";
+    } else {
+      // 偶数の場合はYahooにリダイレクト
+      window.location.href = "https://www.yahoo.co.jp";
+    }
   }
-
   window.addEventListener("load", redirect);
 </script>
 </html>
